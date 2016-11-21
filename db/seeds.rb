@@ -1,21 +1,40 @@
 Song.destroy_all
+User.destroy_all
+
+User.create(
+	[
+		{
+			name: 'Victor',
+			email: 'vdelammazah@gmail.com',
+			password: '111111',
+			role: 'admin'
+		},
+		{
+			name: 'usuario2',
+			email: 'usuario2@usuario.com',
+			password: '111111',
+			role: 'trainer'
+		}
+	]
+)
+
 Song.create(
 	[
 		{
-			name: 'pikachu',
-			description: 'tipo trueno'
+			name: 'all you need is love',
+			duration: '120'
 		},
 		{
-			name: 'squirtle',
-			description: 'tipo agua'
+			name: 'yesterday',
+			duration: '200'
 		},
 		{
-			name: 'charmander',
-			description: 'tipo fuego'
+			name: 'californication',
+			duration: '222'
 		},
 		{
-			name: 'bulbasaur',
-			description: 'tipo hierba'
+			name: 'iron maiden',
+			duration: '111'
 		}
 	]
 )
