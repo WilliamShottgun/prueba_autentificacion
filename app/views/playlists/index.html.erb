@@ -5,6 +5,7 @@
 		<th>Name</th>
 		<th>Description</th>
 		<th>Level</th>
+		<th colspan="1"></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,10 +13,14 @@
 		<% @playlists.each do |playlist| %>
 		<tr>
 		<!-- Cada atrapado tiene song asociado -->
-		<td><%= playlist.song.name %></td>
-		<td><%= playlist.song.description %></td>
-		<td><%= playlist.level %></td> <!-- Y su nivel -->
+		<td><%= playlist.song.nane %></td>
+		<td><%= playlist.song.duration %></td>
+		
+		<td><%= link_to 'canciones', canciones_playlist_path(playlist)%></td> 
 		</tr>
 		<% end %>
 	</tbody>
 </table>
+
+<br>
+<%= link_to "agregar", new_playlist_path, class: "btn btn-primary" %>

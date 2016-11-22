@@ -1,0 +1,9 @@
+<%= form_for(Playlist.new) do |f| %>
+<div class="field">
+<%= f.label :song_ids, "Song" %><br>
+<%= collection_check_boxes(:user, :song_ids, Song.all, :id, :nane) %>
+</div>
+<div class="actions">
+<%= f.submit 'agregar' %>
+</div>
+<% end %>
