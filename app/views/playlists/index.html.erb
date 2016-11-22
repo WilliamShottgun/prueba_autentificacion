@@ -1,0 +1,21 @@
+<h1>Playlists#index</h1>
+<table>
+	<thead>
+		<tr>
+		<th>Name</th>
+		<th>Description</th>
+		<th>Level</th>
+		</tr>
+	</thead>
+	<tbody>
+		<!-- Iteramos por cada atrapado -->
+		<% @playlists.each do |playlist| %>
+		<tr>
+		<!-- Cada atrapado tiene song asociado -->
+		<td><%= playlist.song.name %></td>
+		<td><%= playlist.song.description %></td>
+		<td><%= playlist.level %></td> <!-- Y su nivel -->
+		</tr>
+		<% end %>
+	</tbody>
+</table>

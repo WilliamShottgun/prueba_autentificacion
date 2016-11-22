@@ -1,5 +1,12 @@
+Playlist.destroy_all
 Song.destroy_all
 User.destroy_all
+
+10.times do
+	Playlist.create(
+		user: User.select(:id).order('RANDOM()').first, #Buscamos un user Random
+		song: Song.select(:id).order('RANDOM()').first, # Buscamos un song random
+		level: rand(1..10)
 
 User.create(
 	[
